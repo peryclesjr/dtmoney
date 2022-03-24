@@ -1,13 +1,21 @@
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 import { api } from "../../services/api";
 import { Container } from "./styles";
 
-
+interface Transaction{
+    id:number;
+    title:string;
+    amount:number;
+    category:string;
+    type:string;
+    createAt:string;
+}
 
 export function TransactionTable(){
+    const [transactions,setTransactions] = useState<Transaction[]>([]);
     useEffect(()=>{
         api.get('transactions')
-        .then(response => console.log(response.data));
+        .then(response => setTransactions(response.data.transactions));
     },[]);
 
     return(
@@ -22,21 +30,22 @@ export function TransactionTable(){
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td  >Desenvolvimento de webSite</td>
-                            <td className="deposit">R$1200,00</td>
-                            <td>Desenvolvimento</td>
-                            <td>25/03/2022</td>
-                        </tr>
-                        <tr>
-                            <td>aluguel</td>
-                            <td className="withdraw">- R$1100,00</td>
-                            <td>Casa</td>
-                            <td>17/03/2022</td>
-                        </tr>
+                        {transactions.map( transaction =>(
+                            
+                         <tr key={transaction.id}>
+                                <td>{transaction.title}</td>
+                                <td className={transaction.type}>{transaction.amount}</td>
+                                <td>{transaction.category}</td>
+                                <td>{transaction.createAt}</td>
+                            </tr>
+                        ))}
                        
                     </tbody>    
                 </table>
             </Container>
     );
+}
+
+function userState(arg0: never[]): [any, any] {
+    throw new Error("Function not implemented.");
 }
