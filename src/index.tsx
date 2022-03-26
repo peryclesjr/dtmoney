@@ -2,19 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { App } from './App';
 import { createServer,Model } from 'miragejs';
-import { makeServer } from './server';
+// import { makeServer } from './server';
 
 
-if(process.env.NODE_ENV !== 'production'){
-  makeServer();
-}
+
 createServer({
   models:{
     transaction: Model,
   },
   seeds(server){
     server.db.emptyData();
-    
     server.db.loadData({
       transactions:[
         {
@@ -41,10 +38,9 @@ createServer({
     this.get('transactions', ()=> {
       return this.schema.all('transaction');
     });
-
+    
     this.post('/transactions', (schema, request)=>{
       const data = JSON.parse(request.requestBody);
-      
       return schema.create('transaction',data);
     })
   }

@@ -1,23 +1,10 @@
-import {useEffect, useState} from "react";
-import { api } from "../../services/api";
+import {useContext} from "react";
 import { Container } from "./styles";
+import { TransactionsContext } from "../../TransactionsContext";
 
-interface Transaction{
-    id:number;
-    title:string;
-    amount:number;
-    category:string;
-    type:string;
-    createAt:string;
-}
 
 export function TransactionTable(){
-    const [transactions,setTransactions] = useState<Transaction[]>([]);
-    useEffect(()=>{
-        api.get('transactions')
-        .then(response => setTransactions(response.data.transactions));
-    },[]);
-
+    const {transactions} = useContext(TransactionsContext);
     return(
             <Container>
                 <table>
@@ -54,3 +41,7 @@ export function TransactionTable(){
 function userState(arg0: never[]): [any, any] {
     throw new Error("Function not implemented.");
 }
+function userContext(TransactionContext: any) {
+    throw new Error("Function not implemented.");
+}
+

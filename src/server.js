@@ -1,6 +1,6 @@
-import { createServer } from "miragejs";
+// import { createServer } from "miragejs";
 
-export function makeServer(){
-    let server = createServer();
-    return server;
-}
+// export function makeServer(){
+//     let server = createServer();
+//     return server;
+// }
