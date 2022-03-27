@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img alt="dtmoney" title="dtmoney" src="https://github.com/FelipeBrenner/ignite-reactjs-dtmoney/blob/master/.github/logo.svg" width="220px" />
+  <img alt="dtmoney" title="dtmoney" src="./src/assets/logo_green.svg" width="220px" />
 </h1>
 
 
