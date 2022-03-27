@@ -5,13 +5,7 @@ this project is based on the figma delivery from [@RocketSeat](https://www.figma
 This project is used to learn concepts about custom hook, usecontext, use axios and miragejs. 
 It's simple, but very efficient to learn how to apply concepts.
 
-
-
-To run this projetct correct you need to install:
-
-In the project directory, you can run:
-
-To guarantee this project install all  dependencies, correctly, you need to run this command:
+To guarantee this project install all  dependencies, correctly, you need to run this command, in the project directory:
 ### `yarn install`
 
 After that, you can use:
