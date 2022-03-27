@@ -1,14 +1,13 @@
-# Project Finances 
+## Project Finacials is one project develop in Ignite Rockseat. 
+this project is based on the figma delivery from [@RocketSeat](https://www.figma.com/file/0xmu9mj2TJYoIOubBFWsk5/dtmoney-Ignite-(Copy)?node-id=0%3A1)
 
-  This project is to learn concepts about custom hook, usecontext, use axios and miragejs. 
-  It's simple, but very efficient to learn how to apply concepts.
+
+This project is used to learn concepts about custom hook, usecontext, use axios and miragejs. 
+It's simple, but very efficient to learn how to apply concepts.
 
 
 
 To run this projetct correct you need to install:
-
-
-
 
 In the project directory, you can run:
 
