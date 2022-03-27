@@ -7,7 +7,8 @@
 this project is based on the figma delivery from [@RocketSeat](https://www.figma.com/file/0xmu9mj2TJYoIOubBFWsk5/dtmoney-Ignite-(Copy)?node-id=0%3A1)
 
 
-This project is used to learn concepts about custom hook, usecontext, use axios and miragejs. 
+### This project is developed using TypeScript, React Hooks, useContext, Axios and Miragejs. 
+
 It's simple, but very efficient to learn how to apply concepts.
 
 To guarantee this project install all  dependencies, correctly, you need to run this command, in the project directory:
